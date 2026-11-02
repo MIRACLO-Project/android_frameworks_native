@@ -46,7 +46,7 @@ std::shared_ptr<HalWrapper> connectHal(std::shared_ptr<CallbackScheduler> schedu
         return nullptr;
     }
 
-    auto serviceName = std::string(IVibrator::descriptor) + "/default";
+    auto serviceName = getVibratorServiceName();
     if (AServiceManager_isDeclared(serviceName.c_str())) {
         std::shared_ptr<IVibrator> hal = IVibrator::fromBinder(
                 ndk::SpAIBinder(AServiceManager_waitForService(serviceName.c_str())));

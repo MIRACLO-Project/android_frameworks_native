@@ -27,6 +27,7 @@
 #include <binder/IServiceManager.h>
 
 #include <vibratorservice/VibratorCallbackScheduler.h>
+#include <vibratorservice/VibratorServiceName.h>
 
 namespace android {
 
@@ -424,7 +425,7 @@ public:
             std::shared_ptr<CallbackScheduler> scheduler, std::shared_ptr<IVibrator> handle,
             reconnect_fn reconnectFn =
                     []() {
-                        auto serviceName = std::string(IVibrator::descriptor) + "/default";
+                        auto serviceName = getVibratorServiceName();
                         auto hal = IVibrator::fromBinder(
                                 ndk::SpAIBinder(AServiceManager_checkService(serviceName.c_str())));
                         return HalResult<std::shared_ptr<IVibrator>>::ok(std::move(hal));
