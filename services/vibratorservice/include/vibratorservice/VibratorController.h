@@ -20,6 +20,7 @@
 #include <aidl/android/hardware/vibrator/IVibrator.h>
 
 #include <android-base/thread_annotations.h>
+#include <vibratorservice/VibratorServiceName.h>
 
 namespace android {
 
@@ -32,7 +33,7 @@ class VibratorProvider {
 public:
     using IVibrator = ::aidl::android::hardware::vibrator::IVibrator;
 
-    VibratorProvider() : mServiceName(std::string(IVibrator::descriptor) + "/default") {}
+    VibratorProvider() : mServiceName(getVibratorServiceName()) {}
     virtual ~VibratorProvider() = default;
 
     /* Returns true if vibrator HAL service is declared in the device, false otherwise. */
