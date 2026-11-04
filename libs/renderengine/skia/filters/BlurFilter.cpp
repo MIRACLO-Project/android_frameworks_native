@@ -47,7 +47,7 @@ const SkString kEffectSource_BlurFilter_MixEffect(R"(
     }
 )");
 
-// MiraCLO Liquid Glass. A rounded rectangle (box = centre + half size, radius) of glass: near
+// MIRACLO Liquid Glass. A rounded rectangle (box = centre + half size, radius) of glass: near
 // its edge the content behind is pulled inwards along the edge normal following a circular
 // bevel, the three colour channels are pulled by slightly different amounts, and a thin rim
 // is lit from the top left. Inside the bevel the content is just the blurred input.

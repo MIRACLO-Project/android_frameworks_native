@@ -65,7 +65,7 @@ public:
                                 sk_sp<SkImage> blurredImage, sk_sp<SkImage> input);
 
     /**
-     * MiraCLO Liquid Glass: like drawBlurRegion, but bends the blurred content near the edge of
+     * MIRACLO Liquid Glass: like drawBlurRegion, but bends the blurred content near the edge of
      * effectRegion (refraction), splits its colours there (dispersion) and lights the rim.
      * bevel is the width of the bent edge in canvas pixels.
      */
@@ -94,7 +94,7 @@ private:
     // Optional blend used for crossfade only if mMaxCrossFadeRadius > 0
     const sk_sp<SkRuntimeEffect> mMixEffect;
 
-    // MiraCLO Liquid Glass refraction pass.
+    // MIRACLO Liquid Glass refraction pass.
     const sk_sp<SkRuntimeEffect> mLiquidGlassEffect;
 };
 

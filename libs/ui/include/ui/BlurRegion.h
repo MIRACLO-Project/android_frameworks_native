@@ -39,7 +39,7 @@ struct BlurRegion {
     int top;
     int right;
     int bottom;
-    // MiraCLO Liquid Glass: when refraction > 0 the region bends what is behind it near its
+    // MIRACLO Liquid Glass: when refraction > 0 the region bends what is behind it near its
     // edge. bevel is the width of that edge in pixels; dispersion splits the colours there.
     float refraction = 0.0f;
     float bevel = 0.0f;
